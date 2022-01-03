@@ -1,9 +1,10 @@
+import React from 'react'
 import styled from "styled-components";
-import {FiHome} from 'react-icons/fi'
-import {AiOutlineUser} from 'react-icons/ai'
-import {BiStore} from 'react-icons/bi'
+import { FiHome } from 'react-icons/fi'
+import { AiOutlineUser } from 'react-icons/ai'
+import { BiStore } from 'react-icons/bi'
 import colors from '../assets/colors'
-import { useLocation,useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 const NavMneuEl = styled.nav`
   display: flex;
@@ -17,13 +18,40 @@ const NavMneuEl = styled.nav`
   backdrop-filter: blur(50px);
 `;
 
-import React from 'react'
+const Link = styled.a`
+  font-size: 1.7rem;
+  ${(p) => (p.active ? `color:${colors.Primary};` : "")}
+  position: relative;
+  cursor: pointer;
+  ::before {
+    ${(p) => (!p.active ? "display:none;" : "")}
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0.3rem;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 0.3rem;
+    background-color: ${colors.Primary};
+  }
+`;
+
 
 const NavMenu = () => {
     return (
-        <div>
-            
-        </div>
+        <NavMneuEl>
+            <Link>
+                <FiHome />
+            </Link>
+            <Link>
+                <BiStore />
+            </Link>
+            <Link>
+                <AiOutlineUser />
+            </Link>
+        </NavMneuEl>
     )
 }
 
