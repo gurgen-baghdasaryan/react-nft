@@ -40,12 +40,24 @@ const Link = styled.a`
 
 
 const NavMenu = () => {
+    const nav = useNavigate()
+    const { pathname } = useLocation()
     return (
         <NavMneuEl>
-            <Link>
+            <Link 
+            active={pathname==='/'}
+            onClick={() => {
+                nav("/")
+            }}
+            >
                 <FiHome />
             </Link>
-            <Link>
+            <Link 
+            active={pathname==='/store'}
+            onClick={()=>{
+                nav("/store")
+            }}
+            >
                 <BiStore />
             </Link>
             <Link>
