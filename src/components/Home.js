@@ -38,7 +38,7 @@ const Title = styled.h1`
 
 const Home = () => {
     return (
-        <HomeEl className="home">
+        <HomeEl className="home"> 
             <Title>HoHo-NFT</Title>
             <Searchstyle />
             <Tabstyle tabs={tabs}/>
