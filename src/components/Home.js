@@ -3,9 +3,21 @@ import colors from '../assets/colors'
 import styled from "styled-components";
 import Searchstyle from './styled/Searchstyle';
 
-const div = styled.div`
-background-color:${colors.Primary};
-`
+const HomeEl = styled.div`
+    background-color: ${colors.CardBackground};
+    flex: 1;
+    padding-bottom:10vh; 
+    overflow:auto;
+    overflow-x:hidden;
+    min-height:min-content;
+    padding-top:1rem;
+    scrollbar-width: 0;
+    ::-webkit-scrollbar{
+        display:none; 
+    }
+
+`;
+
 const Title = styled.h1`
   font-family: "DM Mono";
   font-weight: normal;
@@ -17,10 +29,10 @@ const Title = styled.h1`
 
 const Home = () => {
     return (
-        <div>
+        <HomeEl className="home">
             <Title>HoHo-NFT</Title>
-            <Searchstyle/>
-        </div>
+            <Searchstyle />
+        </HomeEl>
     )
 }
 
