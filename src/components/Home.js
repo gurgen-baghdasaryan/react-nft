@@ -2,6 +2,7 @@ import React from 'react'
 import colors from '../assets/colors'
 import styled from "styled-components";
 import Searchstyle from './styled/Searchstyle';
+import Tabstyle from './styled/Tabstyle'
 
 const HomeEl = styled.div`
     background-color: ${colors.CardBackground};
@@ -32,6 +33,7 @@ const Home = () => {
         <HomeEl className="home">
             <Title>HoHo-NFT</Title>
             <Searchstyle />
+            <Tabstyle />
         </HomeEl>
     )
 }
