@@ -1,8 +1,8 @@
 export default {
-    Prymary:"FF164E",
-    Background:"FF164E",
-    CardBackground:"FF164E",
-    Gray:"FF164E",
-    GrayBorder:"FF164E",
+    Primary:"#d55b3e",
+    Background:"#3c4245",
+    CardBackground:"#719192",
+    Gray:"#fcfefe",
+    GrayBorder:"#3c4245",
     GrayBorder:"FF164E",
 }
