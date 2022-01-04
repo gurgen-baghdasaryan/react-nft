@@ -3,12 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import colors from "../../assets/colors";
 
-const i = [
-    {id:1, title: "Featured", content: <div>Tab1</div>, },
-    {id:2, title: "Collections", content: <div>Tab2</div>, },
-    {id:3, title: "Artists", content: <div>Tab3</div>, },
-    {id:4, title: "Tag", content: <div>Tab4</div>, },
-          ];
+
 
 
 const TabEl = styled.div`    
@@ -26,7 +21,7 @@ const Title = styled.span`
     cursor: pointer;
     position: relative;
 ${(p) => (p.active ? "" : `color:${colors.GrayBorder};`)}
-${(p) => (p.active ? `font-weight:500;` : "")}
+${(p) => (p.active ? `font-weight:600;` : "")}
 ::after {
   ${(p) => (!p.active ? "display:none;" : "")}
     content: "";
@@ -38,29 +33,32 @@ ${(p) => (p.active ? `font-weight:500;` : "")}
     margin-left: 50%;
     transform: translateX(-50%);
     height: 0.3rem;
-    background-color: ${colors.GrayBorder};
+    background-color: ${colors.Primary};
 }
 `;
 const Content = styled.div`
     margin: 0 0.5rem;
     margin-top: 1rem;`;
 
-const Tabstyle = () => {
+const Tabstyle = ({tabs}) => {
 
-    const [currentab, setCurrentab] = useState(i[0])
+    const [currentab, setCurrentab] = useState([0])
 
     return (
         <TabEl>
             <TitlesContainer>
-            {i.map(tabs=>{
-                return <Title active={currentab.id===tabs.id}>  {tabs.title}</Title>
+            {tabs.map((tab)=>{
+                return <Title
+                onClick={()=>{
+                     if (currentab.id  !== tab.id){
+                          setCurrentab(tab); 
+                     }
+                }}
+                active={currentab.id===tab.id}>  {tab.title}</Title>
             })}
-                <Title>Featured</Title>
-                <Title>Collection</Title>
-                <Title>Artists</Title>
-                <Title>Tag</Title>
+               
             </TitlesContainer>
-            <Content>Content</Content>
+            <Content>{currentab.content}</Content>
         </TabEl>
     )
 }
