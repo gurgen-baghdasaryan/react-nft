@@ -6,7 +6,7 @@ import colors from "../../assets/colors";
 
 
 const SearchBarEl = styled.div`
-  background-color: ${colors.CardBackground};
+  background-color: ${colors.Gray};
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -14,7 +14,7 @@ const SearchBarEl = styled.div`
   margin: 0 1rem 2rem 1rem;
   & > svg {
     font-size: 1.5rem;
-    color: ${colors.Gray};
+    color: ${colors.Background};
   }
 `;
 
@@ -32,10 +32,10 @@ const Input = styled.input`
 
 const Searchstyle = () => {
     return (
-        <div>
+        <SearchBarEl>
             <Input placeholder="Search on HoHo" />
             <RiSearchLine />
-        </div>
+        </SearchBarEl>
     )
 }
 
