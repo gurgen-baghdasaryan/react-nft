@@ -4,6 +4,14 @@ import styled from "styled-components";
 import Searchstyle from './styled/Searchstyle';
 import Tabstyle from './styled/Tabstyle'
 
+
+const tabs = [
+    {id:1, title: "Featured", content: <div>Tab1</div>, },
+    {id:2, title: "Collections", content: <div>Tab2</div>, },
+    {id:3, title: "Artists", content: <div>Tab3</div>, },
+    {id:4, title: "Tag", content: <div>Tab4</div>, },
+          ]; 
+
 const HomeEl = styled.div`
     background-color: ${colors.CardBackground};
     flex: 1;
@@ -33,7 +41,7 @@ const Home = () => {
         <HomeEl className="home">
             <Title>HoHo-NFT</Title>
             <Searchstyle />
-            <Tabstyle />
+            <Tabstyle tabs={tabs}/>
         </HomeEl>
     )
 }
