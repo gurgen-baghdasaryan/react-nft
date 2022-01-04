@@ -3,7 +3,15 @@ import { useState } from "react";
 import styled from "styled-components";
 import colors from "../../assets/colors";
 
-const TabEl = styled.div`
+const i = [
+    {id:1, title: "Featured", content: <div>Tab1</div>, },
+    {id:2, title: "Collections", content: <div>Tab2</div>, },
+    {id:3, title: "Artists", content: <div>Tab3</div>, },
+    {id:4, title: "Tag", content: <div>Tab4</div>, },
+          ];
+
+
+const TabEl = styled.div`    
     width: 100%;
 `;
 const TitlesContainer = styled.span`
@@ -39,9 +47,14 @@ const Content = styled.div`
 
 const Tabstyle = () => {
 
+    const [currentab, setCurrentab] = useState(i[0])
+
     return (
         <TabEl>
             <TitlesContainer>
+            {i.map(tabs=>{
+                return <Title active={currentab.id===tabs.id}>  {tabs.title}</Title>
+            })}
                 <Title>Featured</Title>
                 <Title>Collection</Title>
                 <Title>Artists</Title>
