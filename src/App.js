@@ -6,6 +6,16 @@ import StorePage from './components/StorePage';
 import Pagestyles from './components/styled/Pagestyles'
 import ProductPage from './components/ProductPage';
 
+const AppEl = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+`;
 
 const Pages = styled.div`
   flex: 1;
@@ -15,7 +25,7 @@ const Pages = styled.div`
 
 function App() {
   return (
-        <Pagestyles>
+        <AppEl>
           <Pages>
             <Routes>
               <Route path="/store" element={<StorePage />} exact />
@@ -24,7 +34,7 @@ function App() {
             </Routes>
           </Pages>
           <NavMenu />
-        </Pagestyles>
+        </AppEl>
   );
 }
 

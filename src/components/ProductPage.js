@@ -62,7 +62,7 @@ const ProductPage = () => {
                 <HoldBidText>
                     Confirm 2.3 Eth bid
                 </HoldBidText>
-                <Button>Holt to bid</Button>
+                <Button>Hold to bid</Button>
             </HoldBid>
         </Pagestyles>
 
