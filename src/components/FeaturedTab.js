@@ -50,6 +50,7 @@ const SubTitle = styled.span`
 
 const ShowMore = styled.span`
   text-align: center;
+  align-content: center;
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -60,7 +61,6 @@ const ShowMore = styled.span`
   padding: 1rem;
   border: 1px solid ${colors.GrayBorder};
   backdrop-filter: blur(17px);
-  border-radius: 12px;
 `;
 
 const BottomFade = styled.span`
@@ -96,7 +96,7 @@ const FeaturedTab = () => {
       })}
       <BottomFade />
       <ShowMore>
-        <BiChevronDown /> Show more
+        <BiChevronDown />Show more
       </ShowMore>
     </FeaturedTabEl>
   )
