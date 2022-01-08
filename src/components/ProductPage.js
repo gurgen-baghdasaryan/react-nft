@@ -9,6 +9,7 @@ import colors from '../assets/colors';
 import styled from "styled-components";
 import Button from './styled/Buttonstyle';
 import Pagestyles from './styled/Pagestyles'
+import ProductCard from './styled/ProductCardstyle';
 
 const TopMenu = styled.div`
   display: flex;
@@ -55,6 +56,7 @@ const ProductPage = () => {
                 <Title>Artwork</Title>
                 <BsThreeDots /> 
             </TopMenu>
+            <ProductCard />
             <HoldBid> 
                 <AiOutlineShoppingCart/>
                 <HoldBidText>
