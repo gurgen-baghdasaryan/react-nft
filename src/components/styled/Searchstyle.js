@@ -1,8 +1,9 @@
 import React from 'react'
 
-import styled from "styled-components";
 import { RiSearchLine } from "react-icons/ri";
 import colors from "../../assets/colors";
+import styled from "styled-components";
+
 
 
 const SearchBarEl = styled.div`
