@@ -1,10 +1,12 @@
 import React from 'react'
+
 import colors from '../assets/colors';
 import styled from "styled-components";
 import Searchstyle from './styled/Searchstyle';
 import Tabstyle from './styled/Tabstyle';
 
 import FeaturedTab from './FeaturedTab'
+import MyFavorits from './MyFavorits';
 
 
 const tabs = [
@@ -44,6 +46,7 @@ const Home = () => {
             <Title>HoHo-NFT</Title>
             <Searchstyle />
             <Tabstyle tabs={tabs} />
+            <MyFavorits />
         </HomeEl>
     )
 }

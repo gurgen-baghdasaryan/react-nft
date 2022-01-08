@@ -1,5 +1,4 @@
 import {  Route, Routes } from 'react-router-dom';
-import colors from './assets/colors';
 import styled from 'styled-components';
 import Home from './components/Home'
 import NavMenu from './components/NavMenu'
