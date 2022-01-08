@@ -13,8 +13,8 @@ import Img from "./styled/Imgstyles";
 
 
 const items = [
-  { id: 1, title: "Universo 34", subTitle: "Maketi", image: image1 },
-  { id: 2, title: "Holy", subTitle: "Lea Kovaseva", image: image2 },
+  { id: 1, title: "Nftverso", subTitle: "Maketi", image: image1 },
+  { id: 2, title: "Eve Lu", subTitle: "Lea Kovaseva", image: image2 },
   { id: 3, title: "TITLE3", subTitle: "SubTitle3", image: image3 },
   { id: 4, title: "TITLE4", subTitle: "SubTitle4", image: image4 },
 ];
