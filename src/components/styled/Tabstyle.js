@@ -4,8 +4,6 @@ import styled from "styled-components";
 import colors from "../../assets/colors";
 
 
-
-
 const TabEl = styled.div`    
     width: 100%;
 `;
@@ -40,23 +38,23 @@ const Content = styled.div`
     margin: 0 0.5rem;
     margin-top: 1rem;`;
 
-const Tabstyle = ({tabs}) => {
+const Tabstyle = ({ tabs }) => {
 
     const [currentab, setCurrentab] = useState([0])
 
     return (
         <TabEl>
             <TitlesContainer>
-            {tabs.map((tab)=>{
-                return <Title
-                onClick={()=>{
-                     if (currentab.id  !== tab.id){
-                          setCurrentab(tab); 
-                     }
-                }}
-                active={currentab.id===tab.id}>  {tab.title}</Title>
-            })}
-               
+                {tabs.map((tab) => {
+                    return <Title
+                        onClick={() => {
+                            if (currentab.id !== tab.id) {
+                                setCurrentab(tab);
+                            }
+                        }}
+                        active={currentab.id === tab.id}>  {tab.title}</Title>
+                })}
+
             </TitlesContainer>
             <Content>{currentab.content}</Content>
         </TabEl>
