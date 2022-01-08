@@ -2,6 +2,7 @@ import {  Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/Home'
 import NavMenu from './components/NavMenu'
+import StorePage from './components/StorePage';
 
 const AppEl = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ function App() {
         <AppEl>
           <Pages>
             <Routes>
-              <Route path="/store" element={<div>Store</div>} exact />
+              <Route path="/store" element={<StorePage />} exact />
               <Route path="/product" element={<div>Product</div>} exact />
               <Route path="/" element={<Home/>} exact />
             </Routes>

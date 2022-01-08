@@ -33,7 +33,7 @@ const Input = styled.input`
 const Searchstyle = () => {
     return (
         <SearchBarEl>
-            <Input placeholder="Search on HoHo" />
+            <Input placeholder="Search on Eve" />
             <RiSearchLine />
         </SearchBarEl>
     )

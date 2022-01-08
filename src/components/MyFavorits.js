@@ -72,7 +72,7 @@ function BidItem() {
  function MyFavorits() {
   return (
     <MyBidsListEl>
-      <Title>My Favorits</Title>
+      <Title>Favorites</Title>
       <ItemList>
         <BidItem />
         <BidItem />
