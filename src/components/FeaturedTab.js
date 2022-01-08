@@ -83,11 +83,15 @@ const FeaturedTab = () => {
   return (
     <FeaturedTabEl>
       {items.map(item => {
-        return <Item>
+        return <Item
+          onClick={()=>{
+            nav("./product")
+          }}
+        >
           <Img src={item.image} />
           <Title>{item.title}</Title>
           <SubTitle>{item.subTitle}</SubTitle>
-
+          
         </Item>
       })}
       <BottomFade />
