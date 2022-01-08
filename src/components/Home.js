@@ -7,6 +7,7 @@ import Tabstyle from './styled/Tabstyle';
 
 import FeaturedTab from './FeaturedTab'
 import MyFavorits from './MyFavorits';
+import Pagestyles from './styled/Pagestyles';
 
 
 const tabs = [
@@ -16,20 +17,7 @@ const tabs = [
     { id: 4, title: "Tag", content: <div>Tab4</div>, },
 ];
 
-const HomeEl = styled.div`
-    background-color: ${colors.CardBackground};
-    flex: 1;
-    padding-bottom:10vh; 
-    overflow:auto;
-    overflow-x:hidden;
-    min-height:min-content;
-    padding-top:1rem;
-    scrollbar-width: 0;
-    ::-webkit-scrollbar{
-        display:none; 
-    }
 
-`;
 
 const Title = styled.h1`
     font-family: "DM Mono";
@@ -42,12 +30,12 @@ const Title = styled.h1`
 
 const Home = () => {
     return (
-        <HomeEl className="home">
+        <Pagestyles>
             <Title>EVELUTION NFT</Title>
             <Searchstyle />
             <Tabstyle tabs={tabs} />
             <MyFavorits />
-        </HomeEl>
+        </Pagestyles>
     )
 }
 
