@@ -32,11 +32,11 @@ const HomeEl = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: "DM Mono";
-  font-weight: normal;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
+    font-family: "DM Mono";
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
 `;
 
 
