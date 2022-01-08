@@ -67,6 +67,19 @@ const BottomFade = styled.span`
   );
 `;
 
+const BottomFade = styled.span`
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    ${colors.Background}
+  );
+`;
+
 const FeaturedTab = () => {
     return (
        <FeaturedTabEl>
