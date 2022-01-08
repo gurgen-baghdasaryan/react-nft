@@ -58,7 +58,23 @@ const Circle = styled.span`
 const ProductCard = () => {
     return (
         <ProductCardEl>
-
+            <Img  src={artImage} />
+            <InfoContainer>
+                <Info>
+                    <Name>Cristal Cube</Name>
+                    <Price>5.20 ETH</Price>
+                </Info>
+            <Img width="15vw" src={shopImage} />    
+            </InfoContainer>
+            <ButtonContainer>
+                <Button flex disabled fw np>
+                    <Circle/>
+                    Disabled
+                </Button>
+                <Button fw np>
+                    Option
+                </Button>
+            </ButtonContainer>
         </ProductCardEl>
     )
 }

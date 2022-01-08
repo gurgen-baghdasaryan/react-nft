@@ -20,8 +20,6 @@ const tabs = [
 ];
 
 
-
-
 const TopMenu = styled.div`
   display: flex;
   justify-content: space-between;
