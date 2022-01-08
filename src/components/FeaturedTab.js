@@ -1,15 +1,24 @@
 import React from 'react'
-  
-import { BiChevronDown } from "react-icons/bi"; 
+
+import { BiChevronDown } from "react-icons/bi";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
 import colors from '../assets/colors'
 
-import image1  from '../assets/img/image1.png'
-import image2  from '../assets/img/image2.png'
-import image3  from '../assets/img/image3.png'
-import image4  from '../assets/img/image4.png'
+import image1 from '../assets/img/image1.png'
+import image2 from '../assets/img/image2.png'
+import image3 from '../assets/img/image3.png'
+import image4 from '../assets/img/image4.png'
 import Img from "./styled/Imgstyles";
+
+
+const items = [
+  { id: 1, title: "Universo 34", subTitle: "Maketi", image: image1 },
+  { id: 2, title: "Holy", subTitle: "Lea Kovaseva", image: image2 },
+  { id: 3, title: "TITLE3", subTitle: "SubTitle3", image: image3 },
+  { id: 4, title: "TITLE4", subTitle: "SubTitle4", image: image4 },
+];
+
 
 const FeaturedTabEl = styled.div`
   display: grid; 
@@ -69,11 +78,24 @@ const BottomFade = styled.span`
 
 
 const FeaturedTab = () => {
-    return (
-       <FeaturedTabEl>
-        Featured TAB
-       </FeaturedTabEl>
-    )
+  const nav = useNavigate();
+
+  return (
+    <FeaturedTabEl>
+      {items.map(item => {
+        return <Item>
+          <Img src={item.image} />
+          <Title>{item.title}</Title>
+          <SubTitle>{item.subTitle}</SubTitle>
+
+        </Item>
+      })}
+      <BottomFade />
+      <ShowMore>
+        <BiChevronDown /> Show more
+      </ShowMore>
+    </FeaturedTabEl>
+  )
 }
 
 export default FeaturedTab

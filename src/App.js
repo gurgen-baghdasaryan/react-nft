@@ -6,7 +6,7 @@ import NavMenu from './components/NavMenu'
 
 const AppEl = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   position: absolute;
   left: 0;
   top: 0;
@@ -27,9 +27,6 @@ function App() {
           <Pages>
             <Routes>
               <Route path="/store" element={<div>Store</div>} exact />
-              <Route path="/product" element={<div>Product</div>} exact />
-              <Route path="/product" element={<div>Product</div>} exact />
-              <Route path="/product" element={<div>Product</div>} exact />
               <Route path="/product" element={<div>Product</div>} exact />
               <Route path="/" element={<Home/>} exact />
             </Routes>
