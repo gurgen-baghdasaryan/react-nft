@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Home from './components/Home'
 import NavMenu from './components/NavMenu'
 import StorePage from './components/StorePage';
-import Pagestyles from './components/styled/Pagestyles'
 import ProductPage from './components/ProductPage';
 
 const AppEl = styled.div`
