@@ -56,11 +56,8 @@ const ShowMore = styled.span`
   left: 0;
   bottom: 0;
   width: 100%;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.32);
-  padding: 1rem;
-  border: 1px solid ${colors.GrayBorder};
   backdrop-filter: blur(17px);
+  color:${colors.Gray};
 `;
 
 const BottomFade = styled.span`
@@ -88,15 +85,15 @@ const FeaturedTab = () => {
             nav("./product")
           }}
         >
-          <Img src={item.image} key={item.id}/>
-          <Title key={item.id}>{item.title}</Title>
-          <SubTitle key={item.id}>{item.subTitle}</SubTitle>
+          <Img src={item.image} />
+          <Title>{item.title}</Title>
+          <SubTitle>{item.subTitle}</SubTitle>
           
         </Item>
       })}
       <BottomFade />
       <ShowMore>
-        <BiChevronDown />Show more
+        <BiChevronDown />
       </ShowMore>
     </FeaturedTabEl>
   )
