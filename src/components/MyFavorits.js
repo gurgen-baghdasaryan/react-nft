@@ -76,6 +76,7 @@ function BidItem() {
       <ItemList>
         <BidItem />
         <BidItem />
+        <BidItem />
       </ItemList>
     </MyBidsListEl>
   );

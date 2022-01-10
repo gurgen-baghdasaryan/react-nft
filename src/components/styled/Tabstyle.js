@@ -46,7 +46,7 @@ const Tabstyle = ({ tabs }) => {
         <TabEl>
             <TitlesContainer>
                 {tabs.map((tab) => {
-                    return <Title
+                    return <Title key={tab.id}
                         onClick={() => {
                             if (currentab.id !== tab.id) {
                                 setCurrentab(tab);
