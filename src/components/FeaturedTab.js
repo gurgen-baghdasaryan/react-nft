@@ -83,14 +83,14 @@ const FeaturedTab = () => {
   return (
     <FeaturedTabEl>
       {items.map(item => {
-        return <Item
+        return <Item key={item.id}
           onClick={()=>{
             nav("./product")
           }}
         >
-          <Img src={item.image} />
-          <Title>{item.title}</Title>
-          <SubTitle>{item.subTitle}</SubTitle>
+          <Img src={item.image} key={item.id}/>
+          <Title key={item.id}>{item.title}</Title>
+          <SubTitle key={item.id}>{item.subTitle}</SubTitle>
           
         </Item>
       })}
